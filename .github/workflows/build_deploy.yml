@@ -1,4 +1,4 @@
-name: Deploy react app on pages
+name: Deploy react app on pages - good
 permissions:
   contents: write
 on: 

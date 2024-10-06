@@ -1,0 +1,52 @@
+name: Deploy react app on pages
+permissions:
+  contents: write
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code
+        uses: actions/checkout@v3
+      - name: Install node V18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  
+      - name: Install
+        run: npm install
+      - name: Test
+        run: npm run test
+    
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code
+        uses: actions/checkout@v3
+      - name: Install node V18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  
+      - name: Install
+        run: npm install
+      - name: Build
+        run: npm run build
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code
+        uses: actions/checkout@v3
+      - name: Install node V18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  
+      - name: Install
+        run: npm install
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          branch: rz-pages

@@ -25,28 +25,30 @@
 }
 
 .App-header > div {
-  max-width: 50%;
-  font-size: 14px;
-  text-align: left;
-  line-height: 1.4;
-  padding: 50px;
+      font-size: 14px;
+    line-height: 1.4;
+    max-width: 320px;
+    padding: 25px;
+    text-align: left;
+    width: 100%;
 }
 
 a.fb {
-    display: flex;
     align-items: center;
-    gap: 15px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    box-shadow: 1px 1px 11px rgba(0, 0, 0, .2);
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 30px 0;
-    width: 330px;
     background: #313131;
-    transition: all ease 0.5s;
+    border-radius: 10px;
+    box-shadow: 1px 1px 11px #0003;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all .5s ease;
+    width: auto;
+    justify-content: center;
 }
 
 a.fb:hover {

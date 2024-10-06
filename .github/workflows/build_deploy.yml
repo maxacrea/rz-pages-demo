@@ -1,6 +1,6 @@
 name: Deploy react app on pages
 permissions:
-  content: write
+  contents: write
 on: workflow_dispatch
 jobs:
   test:

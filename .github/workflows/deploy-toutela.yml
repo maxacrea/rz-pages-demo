@@ -1,0 +1,35 @@
+name: Deploy React App via FTP
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the code from the repository
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Setup Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Assurez-vous d'utiliser la version Node.js adaptée
+
+    # Install dependencies and build the project
+    - name: Install dependencies and build
+      run: |
+        npm install
+        npm run build
+
+    # Deploy to FTP server
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.5.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: build  # Répertoire à uploader (le build React est dans le dossier 'build')
+        server-dir: /public_html  # Remplacez ce chemin par celui du répertoire FTP de votre serveur
+        method: ftp

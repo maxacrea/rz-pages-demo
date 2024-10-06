@@ -1,6 +1,6 @@
 name: Deploy React App via FTP
 
-on: workflow_dispatch
+on: [push, workflow_dispatch]
 
 jobs:
   deploy:

@@ -30,6 +30,6 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: build  # Répertoire à uploader (le build React est dans le dossier 'build')
+        local-dir: build/  # Répertoire à uploader (le build React est dans le dossier 'build')
         server-dir: /public_html  # Remplacez ce chemin par celui du répertoire FTP de votre serveur
         method: ftp

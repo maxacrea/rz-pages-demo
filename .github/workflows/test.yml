@@ -1,11 +1,11 @@
 name: test react app
 on: 
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    path-ignored:
-      - .github/workflows/*
+  # push:
+    # branches:
+      # - main
+    # path-ignored:
+      # - .github/workflows/*
 jobs:
   test:
     runs-on: ubuntu-latest

@@ -9,7 +9,7 @@ jobs:
     steps:
     # Checkout the code from the repository
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     # Setup Node.js
     - name: Set up Node.js
@@ -25,7 +25,7 @@ jobs:
 
     # Deploy to FTP server
     - name: Deploy via FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.5.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}

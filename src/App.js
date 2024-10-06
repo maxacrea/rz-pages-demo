@@ -21,7 +21,7 @@ function App() {
 						nouveautés, offres exclusives, et du lancement officiel !
 					</p>
 					<a className='fb' href="https://web.facebook.com/profile.php?id=61552605450557">
-						👉 Rejoignez-nous sur Facebook <img src={logo} alt="" />
+						👉 Toutela sur Facebook <img src={logo} alt="" />
 					</a>
 					<p>
 						<b>
